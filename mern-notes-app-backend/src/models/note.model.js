@@ -1,4 +1,5 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
+
 const Schema = mongoose.Schema;
 
 const noteSchema = new Schema({
@@ -7,7 +8,8 @@ const noteSchema = new Schema({
   tags: { type: [String], default: [] },
   isPinned: { type: Boolean, default: false },
   userId: { type: String, required: true },
-  createdOn: { type: Date, default: new Date().getTime() },
+  createdOn: { type: Date, default: Date.now },
 });
 
-module.exports = mongoose.model("Note", noteSchema);
+const Note = mongoose.model("Note", noteSchema);
+export default Note;
