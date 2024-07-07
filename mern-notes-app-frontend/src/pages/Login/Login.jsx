@@ -29,7 +29,7 @@ const Login = () => {
 
     //Login API Call using an axios instance with auth token attached
     try {
-      const response = await axiosInstance.post("/login", {
+      const response = await axiosInstance.post("/auth/login", {
         email: email,
         password: password,
       });

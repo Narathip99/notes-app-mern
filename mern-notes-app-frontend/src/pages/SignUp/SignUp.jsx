@@ -35,7 +35,7 @@ const SignUp = () => {
 
     // SignUp API Call using an axios instance with auth token attached
     try {
-      const response = await axiosInstance.post("/create-account", {
+      const response = await axiosInstance.post("/auth/create-account", {
         fullName: name,
         email: email,
         password: password,
