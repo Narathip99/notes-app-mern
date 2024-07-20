@@ -26,8 +26,7 @@ function App() {
 // Define the Root component to handle the initial redirect
 const Root = () => {
   // Check if token exists in localStorage
-  // The double negation operator is used to convert the result into a boolean.
-  const isAuthenticated = !!localStorage.getItem("token");
+  const isAuthenticated = Boolean(localStorage.getItem("token"));
 
   // Redirect to dashboard if authenticated, otherwise to login
   return isAuthenticated ? (

@@ -101,23 +101,23 @@ const AddEditNotes = ({
         <MdClose className="text-xl text-slate-400" />
       </button>
 
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-2 ">
         <label className="input-label">TITLE</label>
         <input
           type="text"
           className="text-2xl text-slate-950 outline-none"
-          placeholder="Complete Daily Barometer by 5"
+          placeholder="Add your title"
           value={title}
           onChange={({ target }) => setTitle(target.value)}
         />
       </div>
 
-      <div className="flex flex-col gap-2 mt-4">
+      <div className="flex flex-col gap-2 mt-4 ">
         <label className="input-label">CONTENT</label>
         <textarea
           type="text"
           className="text-sm text-slate-950 outline-none bg-slate-50 p-2 rounded"
-          placeholder="Content"
+          placeholder="Add your content"
           rows={10}
           value={content}
           onChange={({ target }) => setContent(target.value)}
